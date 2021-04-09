@@ -1,0 +1,43 @@
+
+
+//DATABASE SQLITE 
+
+in our case:
+in Persistence create DztaContext class,
+call DataContext (from using sysstem)
+click light icon and create constructor,
+call DbSet<dependancyClassName> (from using sysstem)
+
+in Startup
+call
+services.AddDbContext<classWhereDbIsCalled>(function)
+
+in Appsetting.dev
+add:
+"DefaultConnections": {
+    "DefaultConnection": "Data source=nameOfDataBase.db"
+}
+
+
+tool verification:  dotnet tool --global
+
+for sqlite we need to see in result dotnet-ef(if you do not, download it)
+
+dotnet ef -h    to see different command
+
+/MIGRATIONS
+dotnet ef migrations add MigrationName -p DataCtxLocation -s StartupProject
+
+in our case : 
+dotnet ef migrations add MigrationName -p Persistence -s API
+
+
+go to Program.cs and configure that 
+
+
+//GIT 
+dotnet new -l to see list of template
+
+git init
+
+dotnet new gitignore
