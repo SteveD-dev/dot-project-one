@@ -41,3 +41,6 @@ dotnet new -l to see list of template
 git init
 
 dotnet new gitignore
+
+//USING REACT with templatetypescript
+npx create-react-app name-app --use-npm -template typescript
